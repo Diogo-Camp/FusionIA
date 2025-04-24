@@ -12,7 +12,7 @@ from datetime import datetime
 
 # ========== CONFIGURAÇÕES ==========
 DB_URL = os.getenv("DATABASE_URL", "postgresql://usuario:senha@localhost/fusiondb")
-OLLAMA_URL = os.getenv("OLLAMA_URL", "http://localhost:11434")
+OLLAMA_URL = os.getenv("OLLAMA_URL", "http://0.0.0.0:11434")
 CONVERSAS_DIR = "conversas"
 
 if not os.path.exists(CONVERSAS_DIR):

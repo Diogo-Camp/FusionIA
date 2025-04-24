@@ -4,7 +4,7 @@
 import requests
 
 class ClienteFusionIA:
-    def __init__(self, servidor_url="http://192.168.0.50:5000"):
+    def __init__(self, servidor_url="http://0.0.0.0:5000"):
         self.servidor_url = servidor_url
         self.modelo = "mistral"
         self.personalidade = "sysadmin"

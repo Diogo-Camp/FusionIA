@@ -9,15 +9,18 @@ import threading
 import requests
 from flask import Flask, request, jsonify, g
 from datetime import datetime
-
+from dotenv import load_dotenv
+load_dotenv()
 # ========== CONFIGURAÇÃO ==========
-DB_URL = os.getenv("DATABASE_URL", "postgresql://usuario:senha@localhost/fusiondb")
-OLLAMA_URL = os.getenv("OLLAMA_URL", "http://localhost:11434")
+#DB_URL = os.getenv("DATABASE_URL", "postgresql://usuario:senha@localhost/fusiondb")
+DB_URL = os.getenv("DATABASE_URL")
+OLLAMA_URL = os.getenv("OLLAMA_URL", "http://0.0.0.0:11434")
 CONVERSAS_DIR = "conversas"
 ollama_lock = threading.Lock()
 
 if not os.path.exists(CONVERSAS_DIR):
     os.makedirs(CONVERSAS_DIR)
+
 
 app = Flask(__name__)
 
