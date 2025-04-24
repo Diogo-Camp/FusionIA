@@ -2,7 +2,7 @@ import requests
 import json
 
 def send_message(message, conversation_id=None):
-    url = "127.0.0.1:11434/api/chat"
+    url = "192.168.0.36:11434/api/chat"
     data = {"message": message}
     if conversation_id:
         data["conversation_id"] = conversation_id

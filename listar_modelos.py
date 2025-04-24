@@ -1,7 +1,7 @@
 import os
 import requests
 import ollama
-OLLAMA_HOST = "http://localhost:11434"
+OLLAMA_HOST = "http://192.168.0.36:11434"
 def listar_modelos():
     try:
         response = requests.get(f"{OLLAMA_HOST}/api/tags")

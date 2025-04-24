@@ -2,7 +2,7 @@ import requests
 import json
 
 class ClienteIA:
-    def __init__(self, servidor_url="http://localhost:5000"):
+    def __init__(self, servidor_url="http://192.168.0.36:5000"):
         self.servidor_url = servidor_url
         self.modelo = None
         self.personalidade = None
