@@ -1,3 +1,0 @@
-OLLAMA_NUM_THREAD=$(( $(nproc) - 2 )) OLLAMA_NO_CUDA=0 CUDA_VISIBLE_DEVICES=0 OLLAMA_MAX_BATCH=4096
-
------------         
